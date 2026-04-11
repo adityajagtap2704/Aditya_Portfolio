@@ -6,7 +6,7 @@ A modern, fully responsive developer portfolio built with React + Vite + Tailwin
 
 ## Live Demo
 
-> Deploy on Vercel and add your URL here.
+> [Deploy on Vercel and add your URL here.](https://aditya-portfolio-theta-liard.vercel.app/)
 
 ---
 
