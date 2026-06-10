@@ -126,7 +126,7 @@ export default function Experience() {
                   ))}
                 </ul>
 
-                <div className="flex flex-wrap gap-2 pt-5 border-t border-slate-100">
+                <div className="flex flex-wrap gap-2 pt-5 border-t border-slate-100 mb-5">
                   {experience[active].tech.map((t, j) => (
                     <motion.span
                       key={t}
@@ -139,6 +139,32 @@ export default function Experience() {
                     </motion.span>
                   ))}
                 </div>
+
+                {/* Links */}
+                {(experience[active].live || experience[active].github) && (
+                  <div className="flex flex-wrap gap-3 pt-4">
+                    {experience[active].live && (
+                      <a
+                        href={experience[active].live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 py-2 rounded-lg bg-indigo-600 text-white text-xs font-semibold hover:bg-indigo-700 transition-colors"
+                      >
+                        🌐 Live URL
+                      </a>
+                    )}
+                    {experience[active].github && (
+                      <a
+                        href={experience[active].github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 py-2 rounded-lg bg-slate-800 text-white text-xs font-semibold hover:bg-slate-900 transition-colors"
+                      >
+                        🔗 GitHub
+                      </a>
+                    )}
+                  </div>
+                )}
               </div>
             </motion.div>
           </AnimatePresence>
